@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font-family: "Microsoft Yahei";
+}
+
+
+/*nav*/
+
+#index_nav {
+    background-color: #393D49;
+    height: 54px;
+}
+
+#head {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin-left: 20px;
+    line-height: 26px;
+}
+
+#index_nav .nav li {
+    font-size: 15px;
+}
+
+#index_nav .nav li a {
+    color: #C2C2C2;
+    line-height: 22px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#in0 a {
+    color: white;
+}
+
+#index_nav ul {
+    position: relative;
+}
+
+#border_b {
+    position: absolute;
+    display: block;
+    top: 44px;
+    left: 4%;
+    height: 3px;
+    width: 82px;
+    background-color: #5FB878;
+    transition: all .5s ease-in-out;
+    /*IE10 firefox opera chrome支持*/
+    -webkit-transition: all .5s ease-in-out;
+    /*safari*/
+    z-index: 1000;
+}
+
+#index_nav .nav li a:hover {
+    color: white;
+}
+
+
+/*canvas粒子文字效果*/
+
+#canvas {
+    margin-top: 54px;
+}
+
+#can {
+    float: left;
+    background-color: #393D49;
+}
+
+#wrap {
+    float: left;
+    width: 316px;
+    height: 200px;
+    background-color: #393D49;
+    position: relative;
+}
+
+#text {
+    display: inline-block;
+    position: absolute;
+    left: 15%;
+    bottom: 10px;
+    width: 70%;
+    height: 50px;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background: none;
+    border: none;
+    border-bottom: 2px white solid;
+    outline: none;
+}
+
+@media screen and (max-width:768px) {
+    #border_b {
+        display: none;
+    }
+    #index_nav ul {
+        margin: 0 -15px;
+        background-color: #393D49;
+    }
+}
