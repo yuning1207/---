@@ -2,6 +2,8 @@ window.onload = function() {
     var textDom = document.getElementById("text");
     var can = document.getElementById("can");
     var ctx = can.getContext("2d");
+    can.width = window.document.body.clientWidth;
+    can.height = "200";
     var textVal = "";
     var initz = 100;
     var thisTIme = null;
@@ -21,6 +23,8 @@ window.onload = function() {
     function initAnimate() {
         grains = [];
         textVal = textDom.value;
+        can.width = window.document.body.clientWidth;
+        can.height = "200";
         ctx.clearRect(0, 0, can.width, can.height);
         drawText(textVal);
         var imgDate = ctx.getImageData(0, 0, can.width, can.height);
@@ -139,4 +143,11 @@ window.onload = function() {
     }
 
     initAnimate();
+    window.addEventListener("resize", resizeCanvas, false);
+
+    function resizeCanvas() {
+        var canvas = document.getElementById('can');
+        canvas.width = window.document.body.clientWidth;
+        canvas.height = "200";
+    }
 }

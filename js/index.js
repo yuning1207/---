@@ -37,4 +37,25 @@ function nav_slide() {
         border_b.style.left = "84%";
     }
 }
+
+function fix_con() {
+    var fix_con = document.getElementById("fix_con");
+    var fix_con_all = document.getElementById("fix_con_all");
+    fix_con.onclick = function() {
+        fix_con_all.style.right = "80px";
+        if (window.event, button) {
+            var buttonnum = window.event.button;
+            if (buttonnum == 1) {
+                fix_con_all.style.right = "-200px";
+            }
+        } else if (event.button) {
+            var buttonnum = event.button;
+            if (buttonnum == 0) {
+                fix_con_all.style.right = "-200px";
+            }
+        }
+    }
+
+}
 addLoadEvent(nav_slide);
+addLoadEvent(fix_con);
