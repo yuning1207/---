@@ -11,6 +11,7 @@
     <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/article.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,33 +32,23 @@
                 <div class="collapse navbar-collapse navbar-responsive-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li id="in0"><a href="index.html"><i class="fa fa-home fa-fw"></i>&nbsp;网站首页</a></li>
-                        <li id="in1"><a href="article.html"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a></li>
-                        <li id="in2"><a href="life.html"><i class="fa fa-hourglass-half fa-fw"></i>&nbsp;生活点滴</a></li>
-                        <li id="in3"><a href="share.html"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a></li>
-                        <li id="in4"><a href="about.html"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a></li>
+                        <li id="in1"><a href="index.html"><i class="fa fa-file-text fa-fw"></i>&nbsp;文章专栏</a></li>
+                        <li id="in2"><a href="index.html"><i class="fa fa-hourglass-half fa-fw"></i>&nbsp;生活点滴</a></li>
+                        <li id="in3"><a href="index.html"><i class="fa fa-tags fa-fw"></i>&nbsp;资源分享</a></li>
+                        <li id="in4"><a href="index.html"><i class="fa fa-info fa-fw"></i>&nbsp;关于本站</a></li>
                         <span id="border_b"></span>
                     </ul>
                 </div>
             </div>
         </div>
-        <div id="canvas">
-            <canvas id="can">浏览器不支持canvas</canvas>
-            <div id="wrap">
-                <input type="text" id="text" value="人决定一切">
-            </div>
-        </div>
     </header>
     <div id="index_main">
-        <div id="laba">
-            <i class="fa fa-volume-up"></i>
-            <div class="index_tips">
-                <span class="tip1">来都来了，说点什么吧！<a>点击前往</a></span>
-                <span class="tip2">不落阁，一个程序员的个人博客！</span>
-                <span class="tip3">新作品预览：<a>点击前往</a></span>
-            </div>
-        </div>
         <div id="cont" class="rows">
+            <div class="article">
+                <p class="con_pre"><a>网站首页</a><i class="fa fa-lg fa-angle-right"></i><span>文章专栏</span></p>
+            </div>
             <div id="index_left" class="col-xs-12 col-md-8">
+
                 <div class="article">
                     <div class="rows">
                         <div class="a_img col-xs-3 col-md-3">
@@ -268,20 +259,21 @@
                 </div>
             </div>
             <div id="index_right" class="col-xs-12 col-md-4">
-                <div id="index_info">
-                    <div class="info_img">
-                        <img src="img/info.jpg">
-                    </div>
-                    <h2>Yu Ning</h2>
-                    <p>一枚90后程序员，前端开发工程师</p>
-                    <p class="info_addr"><i class="fa fa-location-arrow"></i> 陕西 - 西安
-                    </p>
+                <div id="share_search">
+                    <div id="search_input"><input type="text" placeholder="请输入关键词搜索"></div>
+                    <div id="search_i"><a><i class="fa fa-search"></i></a></div>
+                </div>
+                <div id="share_guide">
+                    <p>分类导航</p>
                     <hr>
-                    <div class="info_contact">
-                        <a><i class="fa fa-qq fa-2x"></i></a>
-                        <a><i class="fa fa-envelope fa-2x"></i></a>
-                        <a><i class="fa fa-commenting fa-2x"></i></a>
-                        <a><i class="fa fa-git fa-2x"></i></a>
+                    <div id="guide_con">
+                        <a>ASP.NET MVC</a>
+                        <a>SQL Server</a>
+                        <a>Entity Framework</a>
+                        <a>Web前端</a>
+                        <a>C#基础</a>
+                        <a>杂文随笔</a>
+                        <a>.NET Core</a>
                     </div>
                 </div>
                 <div id="hot_text">
@@ -307,31 +299,6 @@
                     <p><i class="fa fa-hand-o-right"></i><a>不落阁后台模板</a></p>
                     <p><i class="fa fa-hand-o-right"></i><a>不落阁后台模板</a></p>
                 </div>
-                <div id="time_go">
-                    <p class="right_head">一路走来</p>
-                    <hr>
-                    <p class="go_date">2017年03月12日</p>
-                    <p class="go_con">新增留言回复功能！人人都可参与回复</p>
-                    <p class="go_date">2017年03月12日</p>
-                    <p class="go_con">新增留言回复功能！人人都可参与回复</p>
-                    <p class="go_date">2017年03月12日</p>
-                    <p class="go_con">新增留言回复功能！人人都可参与回复</p>
-                    <p class="go_date">2017年03月12日</p>
-                    <p class="go_con">新增留言回复功能！人人都可参与回复</p>
-                    <p class="go_date">2017年03月12日</p>
-                    <p class="go_con">新增留言回复功能！人人都可参与回复</p>
-                    <p class="go_date">2017年03月12日</p>
-                    <p class="go_con">新增留言回复功能！人人都可参与回复</p>
-                    <p class="go_date">2017年03月12日</p>
-                    <p class="go_con">新增留言回复功能！人人都可参与回复</p>
-                    <p class="go_date">2017年03月12日</p>
-                    <p class="go_con">新增留言回复功能！人人都可参与回复</p>
-                </div>
-                <div id="index_friend">
-                    <p class="right_head">友情链接</p>
-                    <hr>
-                    <a>西安邮电大学</a><a>PTA</a><a>前端网</a><a>SegmentFault</a><a>慕课网</a>
-                </div>
             </div>
             <div style="clear:both"></div>
         </div>
@@ -354,7 +321,6 @@
     </footer>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/index-canvas.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 </body>
 

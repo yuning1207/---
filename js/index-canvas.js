@@ -2,8 +2,9 @@ window.onload = function() {
     var textDom = document.getElementById("text");
     var can = document.getElementById("can");
     var ctx = can.getContext("2d");
-    can.width = window.document.body.clientWidth;
-    can.height = "200";
+    //can.width = window.document.body.clientWidth;
+    //can.width = "100%";
+    //can.height = "200";
     var textVal = "";
     var initz = 100;
     var thisTIme = null;
@@ -11,7 +12,7 @@ window.onload = function() {
     var grains = [];
 
     function drawText(text) {
-        //ctx.save();
+        ctx.save();
         ctx.font = "100px 微软雅黑 bold";
         ctx.fillStyle = "rgb(255,255,255)";
         ctx.textAlign = "center";
@@ -28,12 +29,12 @@ window.onload = function() {
         ctx.clearRect(0, 0, can.width, can.height);
         drawText(textVal);
         var imgDate = ctx.getImageData(0, 0, can.width, can.height);
-        //ctx.clearRect(0, 0, can.width, can.height);
-        for (var i = 0; i < imgDate.width; i += 6) {
-            for (var j = 0; j < imgDate.height; j += 6) {
-                var index = (j * imgDate.width + i) * 4;
+        ctx.clearRect(0, 0, can.width, can.height);
+        for (var i = 0; i < imgDate.width; i += 3) { //3为点距
+            for (var j = 0; j < imgDate.height; j += 3) {
+                var index = (j * imgDate.width + i) * 4; //整体宽度
                 if (imgDate.data[index] > 128) {
-                    var grain = new Grain(i, j, 0, 3);
+                    var grain = new Grain(i, j, 0, 3); //3为白点点大小
                     grains.push(grain);
                 }
             }
@@ -143,11 +144,17 @@ window.onload = function() {
     }
 
     initAnimate();
-    window.addEventListener("resize", resizeCanvas, false);
+    // window.addEventListener("resize", resizeCanvas, false);
 
-    function resizeCanvas() {
-        var canvas = document.getElementById('can');
-        canvas.width = window.document.body.clientWidth;
-        canvas.height = "200";
-    }
+    // function resizeCanvas() {
+    //     var canvas = document.getElementById('can');
+    //     canvas.width = window.document.body.clientWidth;
+    //     canvas.height = "200";
+    // }
+    // window.onresize = function() {
+    //     var canvas = document.getElementById("can");
+    //     //canvas.width = window.document.body.clientWidth;
+    //     canvas.width = "100%";
+    //     canvas.height = "200";
+    // }
 }

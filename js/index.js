@@ -43,19 +43,42 @@ function fix_con() {
     var fix_con_all = document.getElementById("fix_con_all");
     fix_con.onclick = function() {
         fix_con_all.style.right = "80px";
-        if (window.event, button) {
-            var buttonnum = window.event.button;
-            if (buttonnum == 1) {
+        document.onmousedown = function(ev) {
+            var oEvent = ev || event; //IE浏览器直接使用event或者window.event得到事件本身。
+            if (oEvent.button == 1 || oEvent.button == 2 || oEvent.button == 0) {
                 fix_con_all.style.right = "-200px";
-            }
-        } else if (event.button) {
-            var buttonnum = event.button;
-            if (buttonnum == 0) {
-                fix_con_all.style.right = "-200px";
-            }
+            } // IE下鼠标的 左键是1 ，  右键是2   ff和chrome下 鼠标左键是0  右键是2
         }
     }
+}
 
+function scroll() {
+    var top = document.getElementById("fix_top");
+    var con = document.getElementById("fix_con");
+    var con_all = document.getElementById("fix_con_all");
+    window.onscroll = function() {
+        if (document.documentElement.scrollTop = document.body.scrollTop != 0) {
+            top.style.display = "block";
+            con.style.bottom = "66px";
+            con_all.style.bottom = "66px";
+        } else {
+            top.style.display = "none";
+            con.style.bottom = "15px";
+            con_all.style.bottom = "15px";
+        }
+    }
+    top.onclick = function() {
+        var tops, speed;
+        timer = setInterval(function() {
+            tops = document.documentElement.scrollTop = document.body.scrollTop;
+            speed = tops / 4;
+            document.documentElement.scrollTop = document.body.scrollTop = tops - speed;
+            if (document.documentElement.scrollTop = document.body.scrollTop == 0) {
+                timer = clearInterval(timer);
+            }
+        }, 50);
+    }
 }
 addLoadEvent(nav_slide);
 addLoadEvent(fix_con);
+addLoadEvent(scroll);
