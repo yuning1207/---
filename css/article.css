@@ -50,8 +50,14 @@
     outline: 0;
 }
 
+#search_i:hover,
+#search_input:hover {
+    border: 1px solid #ccc;
+}
+
 #search_i {
     width: 13%;
+    float: right;
 }
 
 #search_i a {
@@ -61,7 +67,9 @@
     margin: 8px 30%;
 }
 
-#share_guide {
+#share_guide,
+#auther_tell,
+#see_all {
     background-color: white;
     margin-bottom: 15px;
     padding: 15px 10px;
@@ -90,4 +98,64 @@
     color: #5FB878;
     text-decoration: none;
     border-color: #5FB878;
+}
+
+#see_all i,
+#auther_tell i {
+    margin-right: 8px;
+    color: #009688;
+}
+
+#right_guide {
+    display: none;
+}
+
+@media screen and (max-width:991px) {
+    #share_search {
+        display: none;
+    }
+    #share_guide {
+        display: none;
+        position: fixed;
+        background-color: #393D49;
+        top: 53px;
+        height: 92vh;
+        width: 28vw;
+        right: 0;
+        color: white;
+        transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+    }
+    #share_guide p {
+        font-size: 15px;
+    }
+    #guide_con a {
+        background-color: #009688;
+        color: white;
+        font-size: 13px;
+        padding-left: 0;
+        padding-right: 0;
+        border: 0;
+    }
+    #guide_con a:hover {
+        color: white;
+        background-color: #5FB878;
+    }
+    #right_guide {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 40%;
+        width: 15px;
+        height: 75px;
+        background-color: #009688;
+        color: white;
+        text-align: center;
+    }
+    #right_guide i {
+        margin-top: 30px;
+    }
+    #right_guide:hover {
+        color: #ddd;
+    }
 }
