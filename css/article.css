@@ -111,17 +111,28 @@
 }
 
 @media screen and (max-width:991px) {
+    #index_left {
+        margin-bottom: 20px;
+    }
+    #auther_tell {
+        width: 49%;
+        float: left;
+    }
+    #see_all {
+        width: 49%;
+        float: right;
+    }
     #share_search {
         display: none;
     }
     #share_guide {
-        display: none;
+        display: block;
         position: fixed;
         background-color: #393D49;
         top: 53px;
         height: 92vh;
         width: 28vw;
-        right: 0;
+        right: -28vw;
         color: white;
         transition: all .2s ease-in-out;
         -webkit-transition: all .2s ease-in-out;
