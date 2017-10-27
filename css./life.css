@@ -78,12 +78,14 @@
     background-color: #5FB878;
     margin: 0 auto;
     text-align: center;
+    position: fixed;
+    top: 200px;
 }
 
 #life_guide a {
     color: white;
     display: block;
-    padding: 8px;
+    padding: 8px 0;
     font-size: 18px;
 }
 
@@ -94,6 +96,7 @@
 
 #life_c {
     margin-left: 20px;
+    float: right;
 }
 
 #life_c::before {
@@ -102,7 +105,7 @@
     height: 100%;
     background-color: #009688;
     position: absolute;
-    left: 136px;
+    left: 17.25%;
 }
 
 .row_left {
@@ -111,25 +114,51 @@
 }
 
 .row_right {
-    background-color: #009688;
     display: inline-block;
     color: white;
 }
 
 .row_right p {
-    padding: 0;
-    margin: 10px;
-    text-align: center;
+    margin: 0;
+    padding: 10px;
+    text-indent: 2em;
+    display: inline-block;
+    background-color: #009688;
+}
+
+.c_row {
+    margin-bottom: 20px;
+}
+
+.row_mid {
+    float: left;
+    display: inline-block;
+    position: relative;
+    left: -20px;
 }
 
 .c_row i {
     margin: auto 10px;
     z-index: 99;
-    position: relative;
 }
 
-#_2017_c {
+.life_year {
     margin: 10px;
     font-size: 22px;
     font-weight: bold;
+}
+
+@media screen and (max-width:879px) {
+    .c_row i {
+        position: absolute;
+        z-index: -1;
+    }
+    #life_c::before {
+        width: 0px;
+    }
+    #life_c {
+        margin-left: 0;
+        left: 15%;
+        float: left;
+    }
 }
