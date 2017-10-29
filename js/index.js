@@ -80,10 +80,6 @@ function scroll() {
     }
 }
 
-function life_guide {
-    var guide = document.getElementById("life_guide");
-    var links = guide.
-}
 addLoadEvent(nav_slide);
 addLoadEvent(fix_con);
 addLoadEvent(scroll);
