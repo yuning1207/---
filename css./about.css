@@ -1,0 +1,168 @@
+#border_b {
+    left: 84%;
+}
+
+#index_main {
+    padding-top: 54px;
+    width: 100%;
+    height: auto;
+}
+
+#index_main .con_pre {
+    border-left: 5px solid transparent;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+    background-color: white;
+    padding: 8px 15px;
+    width: 85%;
+    margin: 15px auto 10px auto;
+}
+
+#index_main .con_pre:hover {
+    border-left-color: #009688;
+}
+
+.con_pre p {
+    color: #666;
+    margin: 0;
+    font-size: 14px;
+}
+
+.con_pre p a {
+    color: black;
+}
+
+.con_pre p a:hover {
+    text-decoration: none;
+    color: #01AAED;
+}
+
+.con_pre p i {
+    margin: 0 8px;
+    color: black;
+}
+
+#con_head {
+    background-color: white;
+    text-align: center;
+    width: 85%;
+    margin: 15px auto;
+    border-bottom: 1px solid #5FB878;
+}
+
+#con_head a {
+    display: inline-block;
+    color: black;
+    margin: 5px 35px;
+    margin-bottom: 0;
+    padding: 5px;
+    padding-bottom: 9px;
+    font-size: 15px;
+    border-bottom: 3px solid transparent;
+}
+
+#con_head a:hover {
+    text-decoration: none;
+    color: #5FB878;
+    border-bottom-color: #5FB878;
+}
+
+#about_con {
+    width: 85%;
+    margin: 0 auto 50px auto;
+    background-color: white;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+    text-align: center;
+}
+
+
+/*关于作者*/
+
+#about_author {
+    display: none;
+}
+
+.author_img {
+    margin-top: 30px;
+}
+
+.author_img img {
+    border-radius: 50px;
+}
+
+.ab_name {
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.ab_info {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.ab_add {
+    color: #888;
+    font-size: 15px;
+}
+
+.about_contact {
+    display: inline-block;
+    margin: 0 auto 20px auto;
+}
+
+.about_contact a {
+    display: inline-block;
+    color: #444;
+    margin: 0 15px;
+}
+
+hr {
+    color: #e2e2e2;
+}
+
+.about_contact a:hover {
+    color: #777;
+}
+
+#about_author fieldset {
+    border: none;
+    border-top: 1px solid #e2e2e2;
+}
+
+#about_author fieldset legend {
+    width: auto;
+    border: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+#about_author fieldset h3 {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#about_author fieldset p {
+    text-align: left;
+    text-indent: 4em;
+    margin-top: 15px;
+}
+
+.end {
+    font-weight: bold;
+    font-size: 17px;
+    padding-bottom: 15px;
+}
+
+#qianduan,
+#houtai {
+    padding-left: 55px;
+    padding-right: 55px;
+    margin-bottom: 20px;
+}
+
+
+/* 友情链接 */
