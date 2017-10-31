@@ -56,8 +56,9 @@ function scroll() {
     var top = document.getElementById("fix_top");
     var con = document.getElementById("fix_con");
     var con_all = document.getElementById("fix_con_all");
+    var timer;
     window.onscroll = function() {
-        if (document.documentElement.scrollTop = document.body.scrollTop != 0) {
+        if (document.documentElement.scrollTop != 0 || document.body.scrollTop != 0) {
             top.style.display = "block";
             con.style.bottom = "66px";
             con_all.style.bottom = "66px";
@@ -69,11 +70,13 @@ function scroll() {
     }
     top.onclick = function() {
         var tops, speed;
+        var top0;
         timer = setInterval(function() {
-            tops = document.documentElement.scrollTop = document.body.scrollTop;
+            tops = document.documentElement.scrollTop || document.body.scrollTop;
             speed = tops / 4;
             document.documentElement.scrollTop = document.body.scrollTop = tops - speed;
-            if (document.documentElement.scrollTop = document.body.scrollTop == 0) {
+            top0 = document.documentElement.scrollTop || document.body.scrollTop;
+            if (top0 == 0) {
                 timer = clearInterval(timer);
             }
         }, 50);
