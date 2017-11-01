@@ -87,6 +87,11 @@
     display: block;
     padding: 8px 0;
     font-size: 18px;
+    /* background-color: #5FB878; */
+}
+
+#life_guide a:visited {
+    background-color: #5FB878;
 }
 
 #life_guide a:hover {

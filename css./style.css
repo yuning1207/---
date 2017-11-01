@@ -466,6 +466,27 @@
         #cont .article .a_foot span {
             margin: 0 10px;
         }
+        #text {
+            right: 30%;
+        }
+    }
+    
+    @media screen and (max-width:425px) {
+        #text {
+            right: 15%;
+        }
+    }
+    
+    @media screen and (max-width:375px) {
+        #text {
+            right: 10%;
+        }
+    }
+    
+    @media screen and (max-width:320px) {
+        #text {
+            right: 3%;
+        }
     }
     
     @media screen and (max-width:820px) {

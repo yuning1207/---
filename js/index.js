@@ -82,7 +82,6 @@ function scroll() {
         }, 50);
     }
 }
-
 addLoadEvent(nav_slide);
 addLoadEvent(fix_con);
 addLoadEvent(scroll);
