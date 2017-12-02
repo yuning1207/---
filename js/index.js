@@ -42,6 +42,7 @@ function fix_con() {
     var fix_con = document.getElementById("fix_con");
     var fix_con_all = document.getElementById("fix_con_all");
     fix_con.onclick = function() {
+
         fix_con_all.style.right = "80px";
         document.onmousedown = function(ev) {
             var oEvent = ev || event; //IE浏览器直接使用event或者window.event得到事件本身。

@@ -75,6 +75,10 @@
     padding: 15px 10px;
 }
 
+#share_guide {
+    z-index: 1;
+}
+
 #share_guide>p {
     text-align: center;
     font-size: 16px;
@@ -108,6 +112,12 @@
 
 #right_guide {
     display: none;
+}
+
+#fix_con,
+#fix_con_all,
+#fix_top {
+    z-index: 2;
 }
 
 @media screen and (max-width:991px) {
