@@ -185,11 +185,16 @@
     }
     
     #cont .article .a_img {
-        margin: 20px;
+        margin-bottom: 20px;
+        margin-top: 20px;
     }
     
     #cont .article .a_img img {
         width: 100%;
+    }
+    
+    #cont .article .a_con {
+        padding-left: 30px;
     }
     
     #cont .a_title {
@@ -198,6 +203,7 @@
     
     #cont .a_title img {
         margin-bottom: 4px;
+        margin-right: 8px;
     }
     
     #cont .article .a_title a {
@@ -212,6 +218,7 @@
     
     #cont .a_body {
         text-indent: 2em;
+        margin-bottom: 10px;
     }
     
     #cont .article .a_foot .a_data,
@@ -239,6 +246,31 @@
     
     #cont .article .a_foot a {
         color: #009688;
+    }
+    
+    #cont .article .a_foot i {
+        margin-right: 7px;
+    }
+    /* 分页 */
+    
+    #index_pingination {
+        text-align: center;
+    }
+    
+    #index_pingination .pa_in a {
+        background-color: #bbb;
+    }
+    
+    #index_pingination .pa_ban a {
+        color: #aaa;
+        cursor: default;
+        border: none;
+    }
+    
+    #index_pingination .pa_ban a:hover {
+        background-color: #fff;
+        color: #aaa;
+        border: none;
     }
     /*正文右侧*/
     /*个人信息*/
@@ -270,6 +302,7 @@
     
     #index_info .info_img img {
         border-radius: 50px;
+        width: 100px;
     }
     
     #index_info p {
@@ -474,6 +507,9 @@
     @media screen and (max-width:425px) {
         #text {
             right: 15%;
+        }
+        #cont .article .a_con {
+            padding-left: 10px;
         }
     }
     

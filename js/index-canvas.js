@@ -104,7 +104,7 @@ window.onload = function() {
                     item.y = item.iy;
                     item.z = item.iz;
                     pause = true;
-                    console.log("执行完毕！");
+                    //console.log("执行完毕！");
                 } else {
                     item.x += (item.ix - item.x) * 0.1;
                     item.y += (item.iy - item.y) * 0.1;
