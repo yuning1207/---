@@ -257,7 +257,7 @@ function blog_list() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
-                //alert(xhr.responseText);
+                alert(xhr.responseText);
                 var text = JSON.parse(xhr.responseText);
                 if (text["status"] == 0) {
                     var data = text["data"];
@@ -271,7 +271,7 @@ function blog_list() {
             }
         }
     }
-    var url = "http://renluxiang.cn/Blog/listAll/"
+    var url = "http://45.32.41.110/Blog/listAll/"
     xhr.open("get", url + "1", true);
     xhr.send(null);
 }
