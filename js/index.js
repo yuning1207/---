@@ -120,10 +120,11 @@ function blog_list() {
             addclass(divcon, "a_con col-xs-8 col-md-8");
             var a_title = document.createElement("div");
             addclass(a_title, "a_title");
-            if (datalist[i]["isTop"]) {
+            if (datalist[i]["is_top"]) {
                 var topimg = document.createElement("img");
-                topimg.setAttribute("src", "img/顶.png");
+                topimg.setAttribute("src", "img/is_top.png");
                 a_title.appendChild(topimg);
+                alert('is_top');
             }
             var a = document.createElement("a");
             var a_text = document.createTextNode(datalist[i]["title"]);
@@ -233,7 +234,10 @@ function blog_list() {
                         }
                         ul.innerHTML = "";
                         document.body.scrollTop = document.documentElement.scrollTop = 0;
-                        xhr.open("get", url + i, true);
+                        // xhr.open("get", url + i, true);
+                        // alert(url);
+                        // alert(i);
+                        xhr.open("get", url + 2, true);
                         xhr.send(null);
                     }
                 }
@@ -257,21 +261,20 @@ function blog_list() {
     xhr.onreadystatechange = function() {
         if (xhr.readyState == 4) {
             if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
-                alert(xhr.responseText);
+                // alert(xhr.responseText);
                 var text = JSON.parse(xhr.responseText);
-                if (text["status"] == 0) {
-                    var data = text["data"];
-                    var datalist = data["dataList"];
-                    var pageinfo = data["pageInfo"];
-                    allarticle(datalist);
-                    pagination(pageinfo);
-                }
+                // if (text["status"] == 0) {
+                var data = text["data"];
+                var pageinfo = text["pageInfo"];
+                allarticle(data);
+                pagination(pageinfo);
+                // }
             } else {
                 alert("error: " + xhr.status);
             }
         }
     }
-    var url = "http://45.32.41.110/Blog/listAll/"
+    var url = "/Blog/listAll/"
     xhr.open("get", url + "1", true);
     xhr.send(null);
 }
