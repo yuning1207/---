@@ -18,23 +18,23 @@ function nav_slide() {
     var in0 = document.getElementById("in0");
     var in1 = document.getElementById("in1");
     var in2 = document.getElementById("in2");
-    var in3 = document.getElementById("in3");
+    // var in3 = document.getElementById("in3");
     var in4 = document.getElementById("in4");
     var border_b = document.getElementById("border_b");
     in0.onmouseover = function() {
-        border_b.style.left = "4%";
+        border_b.style.left = "5%";
     }
     in1.onmouseover = function() {
-        border_b.style.left = "24%";
+        border_b.style.left = "30%";
     }
     in2.onmouseover = function() {
-        border_b.style.left = "44%";
-    }
-    in3.onmouseover = function() {
-        border_b.style.left = "64%";
-    }
+            border_b.style.left = "55%";
+        }
+        // in3.onmouseover = function() {
+        //     border_b.style.left = "64%";
+        // }
     in4.onmouseover = function() {
-        border_b.style.left = "84%";
+        border_b.style.left = "81%";
     }
 }
 
@@ -263,12 +263,12 @@ function blog_list() {
             if (xhr.status >= 200 && xhr.status < 300 || xhr.status == 304) {
                 // alert(xhr.responseText);
                 var text = JSON.parse(xhr.responseText);
-                // if (text["status"] == 0) {
-                var data = text["data"];
-                var pageinfo = text["pageInfo"];
-                allarticle(data);
-                pagination(pageinfo);
-                // }
+                if (text["status"] == 0) {
+                    var data = text["data"];
+                    var pageinfo = data["pageInfo"];
+                    allarticle(data["list"]);
+                    pagination(pageinfo);
+                }
             } else {
                 alert("error: " + xhr.status);
             }
